@@ -1,0 +1,103 @@
+<html>
+  <head>
+    <title>Fréquences FM en France</title>
+    <link rel="icon" type="image/png" href="https://cdn.glitch.com/3c64455c-65f4-4d29-88c0-99baf216f417%2Fradio.png" />
+    <link href="https://unpkg.com/material-components-web@v4.0.0/dist/material-components-web.min.css" rel="stylesheet">
+    <link href="/ui.css" rel="stylesheet">
+    <script src="https://unpkg.com/material-components-web@v4.0.0/dist/material-components-web.min.js"></script>
+    <script src="/clock.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto" rel="stylesheet">
+    <style>html {scroll-behavior: smooth;},.card{width: 90%;border-bottom: 1px solid #AAAAAA;}</style>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.materialdesignicons.com/5.1.45/css/materialdesignicons.min.css">
+  </head>
+  <body style="margin: 0; font-family: 'Roboto';">
+    <!-- REMONTER -->
+    <a href="#">
+      <button class="mdc-fab mdc-fab--extended" aria-label="Remonter" style="position: fixed; bottom: 18px; right: 18px; background-color: #0064B7;">
+        <div class="mdc-fab__ripple"></div>
+        <span class="mdc-fab__icon mdi mdi-arrow-up"></span>
+        <span class="mdc-fab__label"><span id="clock">00:00:00</span></span>
+      </button>
+    </a>
+    <header class="tab mdc-top-app-bar">
+      <div class="mdc-top-app-bar__row">
+        <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
+          <a href="/">
+            <button class="mdc-top-app-bar__navigation-icon mdc-icon-button">
+              <span class="mdi mdi-arrow-left"></span>
+            </button>
+          </a>
+          <span class="mdc-top-app-bar__title">France Musique Millau</span>
+        </section>
+      </div>
+    </header>
+    <svg viewbox="0 0 500 75" preserveaspectratio="none" style="width: 100%;">
+      <path d="M0.00,10.98 C307.37,49.23 241.49,-9.98 499.43,17.98 L500.00,0.00 L0.00,0.00 Z" style="stroke: none; fill: #0064b7;"></path>
+    </svg>
+    <div class="card">
+      <div class="card-body">
+        <p>
+          <span class="mdi mdi-database-search" style="font-size: 30px; color: #0064B7;"></span><br>
+          <span style="font-size: 18px;">Informations sur la radio</span>
+        </p>
+        <table style="border: 1px solid black; width: 100%;">
+          <tbody>
+            <tr style="border: 1px solid black;">
+              <td><span style="font-size: 13px; color: #0064B7;">RADIO</span></td>
+              <td><span style="font-size: 13px; color: #0064B7;">FREQUENCE</span></td>
+              <td><span style="font-size: 13px; color: #0064B7;">VILLE DE RATTACHEMENT</span></td>
+              <td><span style="font-size: 13px; color: #0064B7;">SITE</span></td>
+              <td><span style="font-size: 13px; color: #0064B7;">PUISSANCE</span></td>
+              <td><span style="font-size: 13px; color: #0064B7;">CODE RDS</span></td>
+            </tr>
+            <tr>
+              <td>France Musique</td>
+              <td>88.9 Mhz</td>
+              <td>Millau (12)</td>
+              <td>Le Lévezou, Candades, Montjaux</td>
+              <td>
+                <ul>
+                  <li>6 kW, 37.8 dBW </li>
+                </ul>
+              </td>
+              <td>
+                _MUSIQUE
+              </td>
+            </tr>
+            <tr>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <br><br>
+    <footer>
+      <div class="center5">
+        <br>
+        <span style="font-size: 22px;">Fréquences FM</span><br><br>
+        <table>
+          <tr>
+            <td><b>Ce site</b></td>
+            <td><b>Retrouvez-nous</b></td>
+            <td><b>Contact</b></td>
+          </tr>
+          <tr>
+            <td><a href="/">Accueil</a></td>
+            <td><a href="https://twitter.com/tometseslive">Twitter</a></td>
+            <td>Lien inconnu</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td><a href="https://discord.com/invite/rjnM653">Discord</a></td>
+            <td></td>
+          </tr>
+        </table>
+        <br>
+        <br>
+        &copy; tometseslives8 2020<br><br>
+      </div>
+    </footer>
+  </body>
+</html>
