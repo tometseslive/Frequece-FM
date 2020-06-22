@@ -1,0 +1,368 @@
+<!-- 
+  C'EST PAS FINI!!!
+  SPOILER ALERT!!!
+-->
+<html>
+  <head>
+    <title>Fréquences FM en France</title>
+    <link rel="icon" type="image/png" href="https://cdn.glitch.com/3c64455c-65f4-4d29-88c0-99baf216f417%2Fradio.png" />
+    <link href="https://unpkg.com/material-components-web@v4.0.0/dist/material-components-web.min.css" rel="stylesheet">
+    <link href="/ui.css" rel="stylesheet">
+    <script src="https://unpkg.com/material-components-web@v4.0.0/dist/material-components-web.min.js"></script>
+    <script src="/clock.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto" rel="stylesheet">
+    <style>html {scroll-behavior: smooth;},.card{width: 90%;border-bottom: 1px solid #AAAAAA;}</style>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.materialdesignicons.com/5.1.45/css/materialdesignicons.min.css">
+  </head>
+  <body style="margin: 0; font-family: 'Roboto';">
+    <!-- REMONTER -->
+    <a href="#">
+      <button class="mdc-fab mdc-fab--extended" aria-label="Remonter" style="position: fixed; bottom: 18px; right: 18px; background-color: #0064B7;">
+        <div class="mdc-fab__ripple"></div>
+        <span class="mdc-fab__icon mdi mdi-arrow-up"></span>
+        <span class="mdc-fab__label"><span id="clock">00:00:00</span></span>
+      </button>
+    </a>
+    <header class="tab mdc-top-app-bar">
+      <div class="mdc-top-app-bar__row">
+        <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
+          <a href="/">
+            <button class="mdc-top-app-bar__navigation-icon mdc-icon-button">
+              <span class="mdi mdi-arrow-left"></span>
+            </button>
+          </a>
+          <span class="mdc-top-app-bar__title">Rodez</span>
+        </section>
+      </div>
+    </header>
+    <svg viewbox="0 0 500 75" preserveaspectratio="none" style="width: 100%;">
+      <path d="M0.00,10.98 C307.37,49.23 241.49,-9.98 499.43,17.98 L500.00,0.00 L0.00,0.00 Z" style="stroke: none; fill: #0064b7;"></path>
+    </svg>
+    <div class="card">
+      <div class="card-body">
+        <p>
+          <span class="mdi mdi-database-search" style="font-size: 30px; color: #0064B7;"></span><br>
+          <span style="font-size: 18px;">Liste des radios en FM</span>
+        </p>
+        <table style="border: 1px solid black; width: 100%;">
+          <tbody>
+            <tr style="border: 1px solid black;">
+              <td><span style="font-size: 13px; color: #0064B7;">RADIO</span></td>
+              <td><span style="font-size: 13px; color: #0064B7;">FREQUENCE</span></td>
+              <td><span style="font-size: 13px; color: #0064B7;">VILLE DE RATTACHEMENT</span></td>
+              <td><span style="font-size: 13px; color: #0064B7;">ADRESSE</span></td>
+              <td><span style="font-size: 13px; color: #0064B7;">DISTANCE</span></td>
+            </tr>
+            <tr>
+              <td><a href="/Radio/Totem.html">Totem✔</a></td>
+              <td>88.1 Mhz</td>
+              <td>Rodez (12)</td>
+              <td><a href="https://cutt.ly/ryDDuDl">Château d'eau, Olemps</a></td>
+              <td>1,7 km</td>
+            </tr>
+            <tr>
+              <td><a href="/Radio/JazzRadio.html">Jazz Radio✔</a></td>
+              <td>88.6 Mhz</td>
+              <td>Rodez (12)</td>
+              <td><a href="https://cutt.ly/OyDS8N3">Le Baracou, La Primaube, Luc</a></td>
+              <td>5,9 km</td>
+            </tr>
+            <tr>
+              <td><a href="/Radio/FraMusiMillau.html">France Musique</a></td>
+              <td>88.9 Mhz</td>
+              <td>Millau (12)</td>
+              <td><a href="https://cutt.ly/0yDDsvs">Le Lévezou, Candades et Montjaux</a></td>
+              <td>34,5 km</td>
+            </tr>
+            <tr>
+              <td><a href="/Radio/Nostalgie.html">Nostalgie✔</a></td>
+              <td>90.5 Mhz</td>
+              <td>Rodez (12)</td>
+              <td><a href="https://cutt.ly/OyDS8N3">Le Baracou, La Primaube, Luc</a></td>
+              <td>5,9 km</td>
+            </tr>
+            <tr>
+              <td>Rire & Chansons ✔</td>
+              <td>92.5 Mhz</td>
+              <td>Rodez (12)</td>
+              <td><a href="https://cutt.ly/OyDS8N3">Le Baracou, La Primaube, Luc</a></td>
+              <td>5,9 km</td>
+            </tr>
+            <tr>
+              <td>Skyrock ✔</td>
+              <td>92.9 Mhz</td>
+              <td>Rodez (12)</td>
+              <td><a href="https://cutt.ly/OyDS8N3">Le Baracou, La Primaube, Luc</a></td>
+              <td>5,9 km</td>
+            </tr>
+            <tr>  
+              <td>France Musique ✔</td>
+              <td>94.3 Mhz</td>
+              <td>Rodez (12)</td>
+              <td><a href="https://cutt.ly/TyFpKYK">La Mouline, Olemps</a></td>
+              <td>1,8 km</td>
+            </tr>
+            <tr>
+              <td>Fun ✔</td>
+              <td>94.7 Mhz</td>
+              <td>Rodez (12)</td>
+              <td><a href="https://cutt.ly/TyFpKYK">La Mouline, Olemps</a></td>
+              <td>1,8 km</td>
+            </tr>
+            <tr>
+              <td>France Inter</td>
+              <td>94.9 Mhz</td>
+              <td>Millau (12)</td>
+              <td><a href="https://cutt.ly/0yDDsvs">Le Lévézou, Candades et Montjaux</a></td>
+              <td>34,5 km</td>
+            </tr>
+            <tr>
+              <td>NRJ ✔</td>
+              <td>96.3 Mhz</td>
+              <td>Rodez (12)</td>
+              <td><a href="https://cutt.ly/OyDS8N3">Le Baracou, La Primaube, Luc</a></td>
+              <td>5,9 km</td>
+            </tr>
+            <tr>
+              <td>MFM ✔</td>
+              <td>97.3 Mhz</td>
+              <td>Rodez (12)</td>
+              <td><a href="https://cutt.ly/TyFpKYK">La Mouline, Olemps</a></td>
+              <td>1,8 km</td>
+            </tr>
+            <tr>
+              <td>France Inter ✔</td>
+              <td>98.2 Mhz</td>
+              <td>Rodez (12)</td>
+              <td><a href="https://cutt.ly/TyFpKYK">La Mouline, Olemps</a></td>
+              <td>1,8 km</td>
+            </tr>
+            <tr>
+              <td>Europe 1 ✔</td>
+              <td>98.8 Mhz</td>
+              <td>Rodez (12)</td>
+              <td><a href="https://cutt.ly/TyFpKYK">La Mouline, Olemps</a></td>
+              <td>1,8 km</td>
+            </tr>
+            <tr>
+              <td>France Culture</td>
+              <td>99.2 Mhz</td>
+              <td>Millau (12)</td>
+              <td><a href="https://cutt.ly/0yDDsvs">Le Lévézou, Candades et Montjaux</a></td>
+              <td>34,5 km</td>
+            </tr>
+            <tr>
+              <td>ChérieFM ✔</td>
+              <td>100 Mhz</td>
+              <td>Rodez (12)</td>
+              <td><a href="https://cutt.ly/OyDS8N3">Le Baracou, La Primaube, Luc</a></td>
+              <td>5,9 km</td>
+            </tr>
+            <tr>
+              <td>RFM ✔</td>
+              <td>100.5 Mhz</td>
+              <td>Rodez (12)</td>
+              <td><a href="https://cutt.ly/OyDS8N3">Le Baracou, La Primaube, Luc</a></td>
+              <td>5,9 km</td>
+            </tr>
+            <tr>
+              <td>RTL2 ✔</td>
+              <td>100.9 Mhz</td>
+              <td>Rodez (12)</td>
+              <td><a href="https://cutt.ly/TyFpKYK">La Mouline, Olemps</a></td>
+              <td>1,8 km</td>
+            </tr>
+            <tr>
+              <td>RTL ✔</td>
+              <td>101.5 Mhz</td>
+              <td>Rodez (12)</td>
+              <td><a href="https://cutt.ly/TyFpKYK">La Mouline, Olemps</a></td>
+              <td>1,8 km</td>
+            </tr>
+            <tr>
+              <td>Totem</td>
+              <td>102.2 Mhz</td>
+              <td>Baraqueville (12)</td>
+              <td><a href="https://cutt.ly/LyFsnrF">Chapelle, Rieupeyroux</a></td>
+              <td>27,5 km</td>
+            </tr>
+            <tr>
+              <td>France Culture ✔</td>
+              <td>103 Mhz</td>
+              <td>Rodez (12)</td>
+              <td><a href="https://cutt.ly/TyFpKYK">La Mouline, Olemps</a></td>
+              <td>1,8 km</td>
+            </tr>
+            <tr>
+              <td>RMC ✔</td>
+              <td>103.4 Mhz</td>
+              <td>Rodez (12)</td>
+              <td><a href="https://cutt.ly/TyFpKYK">La Mouline, Olemps</a></td>
+              <td>1,8 km</td>
+            </tr>
+            <tr>
+              <td>Présence ✔</td>
+              <td>103.9 Mhz</td>
+              <td>Rodez (12)</td>
+              <td><a href="https://cutt.ly/hyFsY8T">Cathérale, Rodez</a></td>
+              <td>200 m</td>
+            </tr>
+            <tr>
+              <td>Sud Radio ✔</td>
+              <td>104.4 Mhz</td>
+              <td>Rodez (12)</td>
+              <td><a href="https://cutt.ly/OyDS8N3">Le Baracou, La Primaube, Luc</a></td>
+              <td>5,9 km</td>
+            </tr>
+            <tr>
+              <td>France Info ✔</td>
+              <td>105.5 Mhz</td>
+              <td>Rodez (12)</td>
+              <td><a href="https://cutt.ly/TyFpKYK">La Mouline, Olemps</a></td>
+              <td>1,8 km</td>
+            </tr>
+            <tr>
+              <td>France Bleu Occitanie ✔</td>
+              <td>106.2 Mhz</td>
+              <td>Rodez (12)</td>
+              <td><a href="https://cutt.ly/TyFpKYK">La Mouline, Olemps</a></td>
+              <td>1,8 km</td>
+            </tr>
+            <tr>
+              <td>Radio Temps Rodez ✔</td>
+              <td>107 Mhz</td>
+              <td>Rodez (12)</td>
+              <td><a href="https://cutt.ly/VyFsVgZ">13 rue des Frères de Turenne, Rodez</a></td>
+              <td>600 m</td>
+            </tr>
+            <tr>
+              <td>Ménergy</td>
+              <td>107.5 Mhz</td>
+              <td>Le Vibal (12)</td>
+              <td><a href="https://cutt.ly/fyFsB5m3">Croix de la Garde, le Vibal</a></td>
+              <td>11 km</td>
+            </tr>
+            <tr>
+              <td>CFM ✔</td>
+              <td>107.9 Mhz</td>
+              <td>Rodez (12)</td>
+              <td><a href="https://cutt.ly/TyFpKYK">La Mouline, Olemps</a></td>
+              <td>1,8 km</td>
+            </tr>
+          </tbody>
+        </table>
+         ✔: réception confirmée sur place à Rodez
+      </div>
+    </div>
+    <br>
+    <div class="card">
+      <div class="card-body">
+        <p>
+          <span class="mdi mdi-database-search" style="font-size: 30px; color: #0064B7;"></span><br>
+          <span style="font-size: 18px;">Liste des radios en DAB+* ou RNT* (Radio Numérique Térestre)</span><br/>
+          <span style="font-size: 18px;">Mise en service Eté 2021 (dans 1 an)</span>
+        </p>
+        <table style="border: 1px solid black; width: 100%;">
+          <tbody>
+            <tr style="border: 1px solid black;">
+              <td><span style="font-size: 13px; color: #0064B7;">RADIO</span></td>
+              <td><span style="font-size: 13px; color: #0064B7;">FREQUENCE</span></td>
+              <td><span style="font-size: 13px; color: #0064B7;">VILLE DE RATTACHEMENT</span></td>
+              <td><span style="font-size: 13px; color: #0064B7;">ADRESSE</span></td>
+              <td><span style="font-size: 13px; color: #0064B7;">DISTANCE</span></td>
+            </tr>
+            <tr>
+              <td>
+                M1
+                <ul>
+                  <li>Air Zen</li>
+                  <li>ChérieFM</li>
+                  <li>Fun</li>
+                  <li>Latina</li>
+                  <li>MFM</li>
+                  <li>Nostalgie</li>
+                  <li>NRJ</li>
+                  <li>R. Classique</li>
+                  <li>Rire & Chansons</li>
+                  <li>RTL</li>
+                  <li>RTL2</li>
+                  <li>Skyrock</li>
+                </ul>
+              </td>
+              <td>10B (221.648 Mhz)</td>
+              <td>Rodez (12)</td>
+              <td><a href="https://www.google.com/maps/place/44%C2%B021'00.0%22N+2%C2%B034'12.0%22E/@44.35,2.5678113,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d44.35!4d2.57">N1_13_12 (12)</a></td>
+              <td>300 m</td>
+            </tr>
+            <tr>
+              <td>
+                M2
+                <ul>
+                  <li>BFM Business</li>
+                  <li>BFM Radio</li>
+                  <li>Europe 1</li>
+                  <li>FIP</li>
+                  <li>France Culture</li>
+                  <li>France Info</li>
+                  <li>France Inter</li>
+                  <li>France Musique</li>
+                  <li>Mouv'</li>
+                  <li>RFM</li>
+                  <li>RMC</li>
+                  <li>Virgine Radio</li>
+                </ul>
+              </td>
+              <td>10C (221.648 Mhz)</td>
+              <td>Rodez (12)</td>
+              <td><a href="https://www.google.com/maps/place/44%C2%B021'00.0%22N+2%C2%B034'12.0%22E/@44.35,2.5678113,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d44.35!4d2.57">N2_9_12 (12)</a></td>
+              <td>300 m</td>
+            </tr>
+          </tbody>
+        </table> 
+      </div>
+    </div>
+    <br><br>
+    <footer>
+      <div class="center5">
+        <br>
+        <span style="font-size: 22px;">Fréquences FM</span><br><br>
+        <table>
+          <tr>
+            <td><b>Ce site</b></td>
+            <td><b>Retrouvez-nous</b></td>
+            <td><b>Contact</b></td>
+            <td><b>Lien</b></td>
+          </tr>
+          <tr>
+            <td><a href="/">Accueil</a></td>
+            <td><a href="https://twitter.com/tometseslive">Twitter</a></td>
+            <td>Lien Inconnu</td>
+            <td><a href="https://www.radionumerique.biz/la-technologie-rnt/">*RNT</a></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td><a href="https://discord.com/invite/rjnM653">Discord</a></td>
+            <td></td>
+            <td><a href="https://www.csa.fr/Informer/Comment-recevoir-la-television-et-la-radio/DAB-tout-savoir-sur-la-radio-numerique-terrestre">*DAB+</a></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td><a href="https://cdn.glitch.com/3c64455c-65f4-4d29-88c0-99baf216f417%2FCSA-Depliant-dab%2B%202019.pdf">Le dépliant DAB+</a></td>
+          </tr>
+        </table>
+        <br>
+        <br>
+        &copy; tometseslives8 2020<br><br>
+      </div>
+    </footer>
+  </body>
+</html>
