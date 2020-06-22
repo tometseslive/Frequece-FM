@@ -7,7 +7,7 @@ Seuls les membres autorisés auront accès à cette repo. Toute autre personne �
 
 Pour les contributeurs, si vous voyez le bouton `Fork`, évitez d'y cliquer dessus; ça rend la repo publique.
 
-Pour signaler un bug, une faute de frappe ou un lien "broken", utilisez les [Issues](https://github.com/tometselive/).
+Pour signaler un bug, une faute de frappe ou un lien "broken", utilisez les [Issues](https://github.com/tometseslive/Frequece-FM/issues).
 
 ## Rendu final
 
