@@ -1,0 +1,44 @@
+.header {
+  background-color: #0064B7;
+  color: white;
+}
+
+.card {
+  margin-left: 5%;
+  margin-right: 5%;
+  background-color: #F1F1F1;
+  border: 1px solid #DDDDDD;
+  border-radius: 5px;
+}
+
+.card-body {
+  margin: 1rem;
+}
+
+.tab {
+  position: fixed;
+  background-color: #0064B7;
+}
+
+footer {
+  background-color: #0064B7;
+  color: white;
+}
+
+table {
+  width: 100%;
+}
+
+.center5 {
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+footer table, footer table tr, footer table td {
+  color: white;
+}
+
+footer table td a, footer table tr a {
+  color: white;
+  text-decoration: underline;
+}

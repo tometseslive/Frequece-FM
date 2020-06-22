@@ -1,0 +1,129 @@
+<html>
+  <head>
+    <title>Fréquences FM en France</title>
+    <link rel="icon" type="image/png" href="https://cdn.glitch.com/3c64455c-65f4-4d29-88c0-99baf216f417%2Fradio.png" />
+    <link href="https://unpkg.com/material-components-web@v4.0.0/dist/material-components-web.min.css" rel="stylesheet">
+    <link href="/ui.css" rel="stylesheet">
+    <script src="https://unpkg.com/material-components-web@v4.0.0/dist/material-components-web.min.js"></script>
+    <script src="/clock.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto" rel="stylesheet">
+    <style>html {scroll-behavior: smooth;}</style>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.materialdesignicons.com/5.1.45/css/materialdesignicons.min.css">
+  </head>
+  <body style="margin: 0; font-family: 'Roboto';">
+    <!-- REMONTER -->
+    <a href="#">
+      <button class="mdc-fab mdc-fab--extended" aria-label="Remonter" style="position: fixed; bottom: 18px; right: 18px; background-color: #0064B7;">
+        <div class="mdc-fab__ripple"></div>
+        <span class="mdc-fab__icon mdi mdi-arrow-up"></span>
+        <span class="mdc-fab__label"><span id="clock">00:00:00</span></span>
+      </button>
+    </a>
+    <div class="header">
+      <br><br><br>
+      <center>
+        <img src="https://cdn.glitch.com/3c64455c-65f4-4d29-88c0-99baf216f417%2Fradio.png" style="width: 70px; max-width: 100%;"><br>
+        <br>
+        <span style="font-size: 30px;">Fréquences FM</span><br>
+      </center>
+    </div>
+    <svg viewbox="0 0 500 75" preserveaspectratio="none" style="width: 100%;">
+      <path d="M0.00,10.98 C307.37,49.23 241.49,-9.98 499.43,17.98 L500.00,0.00 L0.00,0.00 Z" style="stroke: none; fill: #0064b7;"></path>
+    </svg>
+    <div class="card">
+      <div class="card-body">
+        <p>
+          <span class="mdi mdi-shield-check" style="font-size: 22px; color: #0064B7;"></span><br>
+          Bienvenue sur <b>Fréquences FM</b>, le site qui regroupe toutes les radios françaises.
+        </p>
+      </div>
+    </div>
+    <br>
+    <div class="card">
+      <div class="card-body">
+        <p>
+          <span class="mdi mdi-information-outline" style="font-size: 22px; color: #0064B7;"></span><br>
+          Plusieurs listes peuvent être disponibles en fonction de l'évolution des informations dans la base.<br>
+          Il vous suffit de cliquer sur une ville dans la base ci-dessous pour accéder à la liste correspondante.
+        </p>
+      </div>
+    </div>
+    <br>
+    <div class="card">
+      <div class="card-body">
+        <p>
+          <span class="mdi mdi-database-search" style="font-size: 30px; color: #0064B7;"></span><br>
+          <span style="font-size: 18px;">Villes et départements</span>
+        </p>
+        <table style="border: 1px solid black; width: 100%;">
+          <tbody>
+            <tr style="border: 1px solid black;">
+              <td><span style="font-size: 13px; color: #0064B7;">DEPARTEMENT</span></td>
+              <td><span style="font-size: 13px; color: #0064B7;">VILLE</span></td>
+            </tr>
+            <tr>
+              <td>12</td>
+              <td><a style="color: black; text-decoration: underline;" href="https://cutt.ly/7yFpPSy">Rodez</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div><br>
+    <div class="card">
+      <div class="card-body">
+        <p>
+          <span class="mdi mdi-database-search" style="font-size: 30px; color:#0064B7;"></span><br>
+          <span style="font-size: 18px;">Radios en direct</span>
+          <ul>
+            <li><b>Rodez</b></li>
+            <ul>
+              <li>
+                <input name="player" type="submit" value="Totem en direct" id="player" class="uk-button uk-button-primary" onclick="window.open('https://aratotem.ice.infomaniak.ch/aveyron.mp3', 'TOTEM - LE DIRECT', 'height=600, width=400, top=100, left=100, toolbar=no, menubar=no, location=no, resizable=no, scrollbars=no, status=no'); return false;">
+                <a style="color: black; text-decoration: underline;" href=""></a>
+              </li>
+               <li>
+                <input name="player" type="submit" value="Jazz Radio en direct" id="player2" class="uk-button uk-button-primary" onclick="window.open('https://jazzradio.ice.infomaniak.ch/jazzradio-high.mp3', 'Jazz Radio Le Direct', 'height=600, width=400, top=100, left=100, toolbar=no, menubar=no, location=no, resizable=no, scrollbars=no, status=no'); return false;">
+                <a style="color: black; text-decoration: underline;" href=""></a>
+              </li>
+              <li>
+                <input name="player" type="submit" value="France Musique en direct" id="player3" class="uk-button uk-button-primary" onclick="window.open('https://direct.francemusique.fr/live/francemusique-midfi.mp3', 'France Musique Le Direct', 'height=600, width=400, top=100, left=100, toolbar=no, menubar=no, location=no, resizable=no, scrollbars=no, status=no'); return false;">
+                <a style="color: black; text-decoration: underline;" href=""></a>
+              </li>
+            </ul>
+          </ul>
+        </p>
+      </div> 
+    </div>
+    <br><br>
+    <footer>
+      <div class="center5">
+        <br>
+        <span style="font-size: 22px;">Fréquences FM</span><br><br>
+        <table>
+          <tr>
+            <td><b>Ce site</b></td>
+            <td><b>Retrouvez-nous</b></td>
+            <td><b>Contact</b></td>
+            <td><b>Lien</b></td>
+          </tr>
+          <tr>
+            <td><a href="/">Accueil</a></td>
+            <td><a href="https://cutt.ly/PyFpURV">Twitter</a></td>
+            <td>Lien Inconnu</td>
+            <td><a href="https://www.radionumerique.biz/la-technologie-rnt/">RNT</a></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td><a href="https://cutt.ly/eyFpIH8">Discord</a></td>
+            <td></td>
+            <td><a href="https://www.csa.fr/Informer/Comment-recevoir-la-television-et-la-radio/DAB-tout-savoir-sur-la-radio-numerique-terrestre">DAB+</a></td>
+          </tr>
+        </table>
+        <br>
+        <br>
+        &copy; tometseslives8 2020<br><br>
+      </div>
+    </footer>
+  </body>
+</html>
