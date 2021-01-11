@@ -6,4 +6,4 @@ Pour signaler un bug, une faute de frappe ou un lien "broken", utilisez les [Iss
 
 ## Rendu final
 
-Le rendu final se trouve [ici](https://radio-fm.glitch.me//)
+Le rendu final se trouve [ici](https://radiofm.gq//)
