@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto');
+/* CSS files add styling rules to your content */
 
 body {
   font-family: helvetica, arial, sans-serif;
@@ -7,9 +7,8 @@ body {
 
 h1 {
   font-style: italic;
-  color: #373fff;
+  color: #0064B7;
 }
-
-.new {
-  font-family: "Roboto";
-}
+R1 {color: #0064B7;
+  
+    }

@@ -1,23 +1,42 @@
-<html>
-  <head>
+<head>
     <title>Fréquences FM en France</title>
-    <link rel="icon" type="image/png" href="https://cdn.glitch.com/3c64455c-65f4-4d29-88c0-99baf216f417%2Fradio.png" />
+    <link rel="icon" type="image/png" href="https://cdn.glitch.com/3c64455c-65f4-4d29-88c0-99baf216f417%2Fradio.png">
     <link href="https://unpkg.com/material-components-web@v4.0.0/dist/material-components-web.min.css" rel="stylesheet">
     <link href="/ui.css" rel="stylesheet">
     <script src="https://unpkg.com/material-components-web@v4.0.0/dist/material-components-web.min.js"></script>
-    <script src="/clock.js" defer></script>
+    <script src="/script.js" defer=""></script>
     <link href="https://fonts.googleapis.com/css2?family=Roboto" rel="stylesheet">
-    <style>html {scroll-behavior: smooth;}</style>
+    <style>html {scroll-behavior: smooth;};.card{width: 90%;border-bottom: 1px solid #AAAAAA;};body {max-width: 100%;}</style>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdn.materialdesignicons.com/5.1.45/css/materialdesignicons.min.css">
+    <style type="text/css">
+      .header{
+            color: white;
+            background-color: #0064B7 }
+    </style>
   </head>
-  <body style="margin: 0; font-family: 'Roboto';">
+  <body style="margin: 0; font-family: 'Roboto';" onload="init();">
     <!-- REMONTER -->
+    <script>
+      const compare = (ids, asc) => (row1, row2) => {
+      const tdValue = (row, ids) => row.children[ids].textContent;
+      const tri = (v1, v2) => v1 !== '' && v2 !== '' && !isNaN(v1) && !isNaN(v2) ? v1 - v2 : v1.toString().localeCompare(v2);
+      return tri(tdValue(asc ? row1 : row2, ids), tdValue(asc ? row2 : row1, ids));
+    };
+
+    const tbody = document.querySelector('tbody');
+    const thx = document.querySelectorAll('td');
+    const trxb = tbody.querySelectorAll('tr');
+    thx.forEach(th => th.addEventListener('click', () => {
+      let classe = Array.from(trxb).sort(compare(Array.from(thx).indexOf(th), this.asc = !this.asc));
+      classe.forEach(tr => tbody.appendChild(tr));
+    }));
+    </script> 
     <a href="#">
       <button class="mdc-fab mdc-fab--extended" aria-label="Remonter" style="position: fixed; bottom: 18px; right: 18px; background-color: #0064B7;">
         <div class="mdc-fab__ripple"></div>
         <span class="mdc-fab__icon mdi mdi-arrow-up"></span>
-        <span class="mdc-fab__label"><span id="clock">00:00:00</span></span>
+        <span class="mdc-fab__label"><span id="clock">...</span></span>
       </button>
     </a>
     <div class="header">
@@ -28,7 +47,7 @@
         <span style="font-size: 30px;">Fréquences FM</span><br>
       </center>
     </div>
-    <svg viewbox="0 0 500 75" preserveaspectratio="none" style="width: 100%;">
+    <svg viewBox="0 0 500 75" preserveAspectRatio="none" style="width: 100%;">
       <path d="M0.00,10.98 C307.37,49.23 241.49,-9.98 499.43,17.98 L500.00,0.00 L0.00,0.00 Z" style="stroke: none; fill: #0064b7;"></path>
     </svg>
     <div class="card">
@@ -64,7 +83,7 @@
             </tr>
             <tr>
               <td>12</td>
-              <td><a style="color: black; text-decoration: underline;" href="https://cutt.ly/7yFpPSy">Rodez</a></td>
+              <td><a style="color: black; text-decoration: underline;" href="Rodez/2019-08-16b">Rodez</a></td>
             </tr>
           </tbody>
         </table>
@@ -75,7 +94,7 @@
         <p>
           <span class="mdi mdi-database-search" style="font-size: 30px; color:#0064B7;"></span><br>
           <span style="font-size: 18px;">Radios en direct</span>
-          <ul>
+          </p><ul>
             <li><b>Rodez</b></li>
             <ul>
               <li>
@@ -83,16 +102,28 @@
                 <a style="color: black; text-decoration: underline;" href=""></a>
               </li>
                <li>
-                <input name="player" type="submit" value="Jazz Radio en direct" id="player2" class="uk-button uk-button-primary" onclick="window.open('https://jazzradio.ice.infomaniak.ch/jazzradio-high.mp3', 'Jazz Radio Le Direct', 'height=600, width=400, top=100, left=100, toolbar=no, menubar=no, location=no, resizable=no, scrollbars=no, status=no'); return false;">
+                <input name="player" type="submit" value="Jazz Radio en direct" id="player2" class="uk-button uk-button-primary" onclick="window.open('https://jazzradio.ice.infomaniak.ch/jazzradio-high.mp3', 'Jazz Radio - LE DIRECT', 'height=600, width=400, top=100, left=100, toolbar=no, menubar=no, location=no, resizable=no, scrollbars=no, status=no'); return false;">
                 <a style="color: black; text-decoration: underline;" href=""></a>
               </li>
               <li>
-                <input name="player" type="submit" value="France Musique en direct" id="player3" class="uk-button uk-button-primary" onclick="window.open('https://direct.francemusique.fr/live/francemusique-midfi.mp3', 'France Musique Le Direct', 'height=600, width=400, top=100, left=100, toolbar=no, menubar=no, location=no, resizable=no, scrollbars=no, status=no'); return false;">
+                <input name="player" type="submit" value="France Musique en direct" id="player3" class="uk-button uk-button-primary" onclick="window.open('https://direct.francemusique.fr/live/francemusique-midfi.mp3', 'France Musique - LE DIRECT', 'height=600, width=400, top=100, left=100, toolbar=no, menubar=no, location=no, resizable=no, scrollbars=no, status=no'); return false;">
                 <a style="color: black; text-decoration: underline;" href=""></a>
+              </li>
+              <li>
+                <input name="player" type="submit" value="Nostalgie en direct" id="player4" class="uk-button uk-button-primary" onclick="window.open('http://scdn.nrjaudio.fm/adwz2/fr/30601/mp3_128.mp3', 'Nostalgie - LE DIRECT', 'height=600, width=400, top=100, left=100, toolbar=no, menubar=no, location=no, resizable=no, scrollbars=no, status=no'); return false;">
+                <a style="color: black; text-decoration: underline;" href=""></a>
+              </li>
+              <li>
+                <input name="player" type="submit" value="Rire & Chansons en direct" id="player5" class="uk-button uk-button-primary" onclick="window.open('http://scdn.nrjaudio.fm/adwz2/fr/30401/mp3_128.mp3', 'Rire & Chansons - LE DIRECT', 'height=600, width=400, top=100, left=100, toolbar=no, menubar=no, location=no, resizable=no, scrollbars=no, status=no'); return false;">
+                <a style="color: black; text-decoration: underline;" href=""></a>
+              </li>
+              <li>
+                <input name="player" type="submit" value="Skyrock en direct" id="player6" class="uk-button uk-button-primary" onclick="window.open('http://icecast.skyrock.net/s/natio_mp3_128k', 'Skyrock - LE DIRECT', 'height=600, width=400, top=100, left=100, toolbar=no, menubar=no, location=no, resizable=no, scrollbars=no, status=no'); return false;">
+                <a style="color: black; text-decoration: unerline;" href=""></a>
               </li>
             </ul>
           </ul>
-        </p>
+        <p></p>
       </div> 
     </div>
     <br><br>
@@ -101,29 +132,32 @@
         <br>
         <span style="font-size: 22px;">Fréquences FM</span><br><br>
         <table>
-          <tr>
+          <tbody><tr>
             <td><b>Ce site</b></td>
             <td><b>Retrouvez-nous</b></td>
-            <td><b>Contact</b></td>
             <td><b>Lien</b></td>
           </tr>
           <tr>
             <td><a href="/">Accueil</a></td>
             <td><a href="https://cutt.ly/PyFpURV">Twitter</a></td>
-            <td>Lien Inconnu</td>
             <td><a href="https://www.radionumerique.biz/la-technologie-rnt/">RNT</a></td>
           </tr>
           <tr>
             <td></td>
             <td><a href="https://cutt.ly/eyFpIH8">Discord</a></td>
-            <td></td>
             <td><a href="https://www.csa.fr/Informer/Comment-recevoir-la-television-et-la-radio/DAB-tout-savoir-sur-la-radio-numerique-terrestre">DAB+</a></td>
           </tr>
-        </table>
+          <tr>
+            <td></td>
+            <td><a href="https://github.com/tometseslive/Radio-FM">GitHub</a></td>
+            <td></td>
+          </tr>
+        </tbody></table>
         <br>
         <br>
-        &copy; tometseslives8 2020<br><br>
+        © tometseslives8 2020<br>
+        Ce site protéger par <strong>CloudFlare</strong>.
       </div>
     </footer>
-  </body>
-</html>
+  
+</body>
